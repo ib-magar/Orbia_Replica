@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEditor;
 using UnityEditor.ShaderKeywordFilter;
+using System;
 
 public enum _State
 {
@@ -12,6 +13,9 @@ public enum _State
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterController : MonoBehaviour
 {
+    //Events
+    public event Action _playerFailed;
+
     [SerializeField] _State state;
     [SerializeField] float _moveSpeed;
     [SerializeField] float _moveTime;
@@ -23,9 +27,11 @@ public class CharacterController : MonoBehaviour
     [SerializeField] GameObject _currentCheckPoint;
     [Header("external Scripts")]
     [SerializeField] GameManager _gameManager;
+    private Fx_player _fxPlayer;
     private void Awake()
     {
         _gameManager=GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        _fxPlayer=GetComponent<Fx_player>();
         state=_State.idle;
     }
     private void Start()
@@ -45,6 +51,7 @@ public class CharacterController : MonoBehaviour
                 state = _State.idle;
             });
             else*/
+            _fxPlayer.DashSoundPlay();
             _player.DOMove(movePosition.transform.position, _moveTime).From(_player.position).OnComplete(() =>
             {
                 state= _State.idle;
@@ -58,11 +65,12 @@ public class CharacterController : MonoBehaviour
     {
         if(collision.CompareTag("checkPoint"))
         {
+            _fxPlayer.CheckPointReached();
             _gameManager.CheckAndRemoveNode(collision.gameObject);
         }
         else if(collision.CompareTag("enemy"))
         {
-            //gameObject.SetActive(false);
+            _fxPlayer.FailCollision();
             GetComponent<CircleCollider2D>().enabled = false;
            // GetComponent<Rigidbody2D>().isKinematic = false;
             _player.DOMoveY(_player.position.y - _fallDownDistance, _fallTime).From(_player.position.y).OnComplete(() =>
@@ -71,6 +79,8 @@ public class CharacterController : MonoBehaviour
                 GetComponent<CircleCollider2D>().enabled = true;
             });
             _gameManager._playerdead = true;
+
+            if (_playerFailed != null) _playerFailed();
         }
     }
 

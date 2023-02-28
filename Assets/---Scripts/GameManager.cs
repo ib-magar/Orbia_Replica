@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         _player=GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
         _checkPointHolderTransform = transform.Find("CheckPointHolder").transform;
        
-        _checkPointList.Add(new GameObject("empty object"));
+        _checkPointList.Add(Instantiate(new GameObject("object"),Vector3.zero-Vector3.down*4f,Quaternion.identity,_checkPointHolderTransform));
         _checkPointList.Add(Instantiate(_checkPointDummyObject, Vector3.zero, Quaternion.identity, _checkPointHolderTransform));
     }
     private void Start()
@@ -83,7 +83,10 @@ public class GameManager : MonoBehaviour
         //if (_checkPointList.Contains(g))
         //_checkPointList.Remove(g);
         _checkPointList.RemoveAt(0);
-             
+
+        //make the next checkpoint to rotate
+        _checkPointList[1].GetComponent<checkPointScript>()._canRotate = true;
+
         if(_checkPointHolderTransform.childCount>_checkPointCount+1)
         {
             Destroy(_checkPointHolderTransform.GetChild(0).gameObject);

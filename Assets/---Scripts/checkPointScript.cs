@@ -14,7 +14,7 @@ public class checkPointScript : MonoBehaviour
     [SerializeField] public int _enemiesCount=3;
     [SerializeField] public float _radius;
     [Header("rotation")]
-    [SerializeField] bool _canRotate=false;
+    [SerializeField] public bool _canRotate=false;
     [SerializeField] public float _rotationSpeed;
 
     [Header("Child")]
@@ -48,7 +48,6 @@ public class checkPointScript : MonoBehaviour
                 break;
             default: break;
         }
-        _canRotate = true;
 
     }
     void InsantiateEnemiesMeasureType()
