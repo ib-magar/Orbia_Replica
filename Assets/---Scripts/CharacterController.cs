@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEditor;
-using UnityEditor.ShaderKeywordFilter;
 using System;
 
 public enum _State
@@ -70,6 +69,7 @@ public class CharacterController : MonoBehaviour
         }
         else if(collision.CompareTag("enemy"))
         {
+            _gameManager._playerdead = true;
             _fxPlayer.FailCollision();
             GetComponent<CircleCollider2D>().enabled = false;
            // GetComponent<Rigidbody2D>().isKinematic = false;
@@ -77,10 +77,9 @@ public class CharacterController : MonoBehaviour
             {
                 //Game Restart Menu
                 GetComponent<CircleCollider2D>().enabled = true;
+                if (_playerFailed != null) _playerFailed();
             });
-            _gameManager._playerdead = true;
 
-            if (_playerFailed != null) _playerFailed();
         }
     }
 

@@ -35,7 +35,13 @@ public class UI_Manager : MonoBehaviour
     {
         _RestartButton.gameObject.SetActive(false);
         _gameManager.MoveCharacter();
-        _GamePlayUI.SetActive(true);
+        StartCoroutine(gamePlaySetActive(true));
+    }
+    IEnumerator gamePlaySetActive(bool _isTrue)
+    {
+        yield return new WaitForSeconds(.4f);
+        _GamePlayUI.SetActive(_isTrue);
+
     }
     public void PlayerFailed()
     {

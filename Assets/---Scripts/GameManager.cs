@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] int _Score;
     [Header("bools")]
     public bool _playerdead;
 
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         GenerateUpcomingCheckpoints();
         //_player.Move(_checkPointList[0]);
         MoveCharacter();
+        _Score = 1;
     }
     [ContextMenu("tools/removeFirstNode")]
     public void removeFirstPoint()
@@ -70,7 +72,17 @@ public class GameManager : MonoBehaviour
         Vector3 spawnPosition = _previousCheckpoint.position + _angleGameobject.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
         //Vector3 spawnPosition = _previousCheckpoint.position +Vector3.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
         
-        return (Instantiate(_checkPointGameObject, spawnPosition, Quaternion.identity,_checkPointHolderTransform));
+       GameObject g = Instantiate(_checkPointGameObject, spawnPosition, Quaternion.identity,_checkPointHolderTransform);
+       checkPointScript c = g.GetComponent<checkPointScript>();
+        c._checkPointScore.text = (++_Score).ToString();
+
+        alignType _random_enum = (alignType)Random.Range(0, System.Enum.GetValues(typeof(alignType)).Length);
+        int __enemiesCount = Random.Range(4, 8);
+        float __radius = Random.Range(1.4f, 2.1f);
+        float __rotationspeed = Random.Range(80, 200);
+        c.Init(alignType.random, __enemiesCount, __radius, __rotationspeed);
+
+        return g;
     }
     public void CheckAndRemoveNode(GameObject g)
     {
@@ -98,6 +110,7 @@ public class GameManager : MonoBehaviour
     {
        // if (_checkPointList != null || _checkPointList.Count < 1)               // can create function to check the nullity of the list 
         //    return;
+
         if(_playerdead)
         {
         _player.Move(_checkPointList[0]);

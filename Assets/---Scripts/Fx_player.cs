@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
-using UnityEditor.ShaderKeywordFilter;
-using UnityEditorInternal;
 using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Fx_player : MonoBehaviour
