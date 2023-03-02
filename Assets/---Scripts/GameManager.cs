@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,8 +35,28 @@ public class GameManager : MonoBehaviour
 
     [Header("Enemy variation")]
     [SerializeField] List<GameObject> _enemies=new List<GameObject>();
+
+    [Header("Mini Checkpoints")]
+    [SerializeField] List<GameObject> _miniCheckPoints = new List<GameObject>();
+    [SerializeField] public int _miniCheckPointCount;
+    private bool _firstInstantiationCheckPoint = true;
+
+    public GameObject shiel;
+   // [Header("Getting back")]
+    //[SerializeField] checkPointScript _lastCheckPoint;
+    public Transform getLastCheckPoint()
+    {
+        return _checkPointList[0].transform;
+    }
+    public void GetMiniCheckPointList(List<GameObject> _list)
+    {
+        _miniCheckPoints = _list;
+        _miniCheckPointCount = 0;
+    }
     private void Awake()
     {
+        _firstInstantiationCheckPoint = true;
+
         _player=GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
         _checkPointHolderTransform = transform.Find("CheckPointHolder").transform;
        
@@ -47,6 +69,7 @@ public class GameManager : MonoBehaviour
         //_player.Move(_checkPointList[0]);
         MoveCharacter();
         _Score = 1;
+        
     }
     [ContextMenu("tools/removeFirstNode")]
     public void removeFirstPoint()
@@ -60,10 +83,23 @@ public class GameManager : MonoBehaviour
             Debug.LogError("_checkpoint list empty");
             return;
         }
-        while (_checkPointList.Count < _checkPointCount)
+        int _limit = _checkPointCount + 1;
+        if (_firstInstantiationCheckPoint)
         {
-            // 
-            _checkPointList.Add(GenerateCheckPoint(_checkPointList[_checkPointList.Count - 1].transform));
+            _limit = _checkPointCount + 1 + 1;
+            _firstInstantiationCheckPoint = false;
+        }
+        else
+        {
+            _limit = _checkPointCount + 1;
+        }
+        while (_checkPointList.Count < _limit)
+        {
+            if (_miniCheckPoints.Count > 0)
+                // 
+                _checkPointList.Add(GenerateCheckPoint(_miniCheckPoints[_miniCheckPoints.Count - 1].transform));
+            else
+                _checkPointList.Add(GenerateCheckPoint(_checkPointList[_checkPointList.Count - 1].transform));
         }
     }
     GameObject GenerateCheckPoint(Transform _previousCheckpoint)
@@ -72,39 +108,64 @@ public class GameManager : MonoBehaviour
         Vector3 spawnPosition = _previousCheckpoint.position + _angleGameobject.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
         //Vector3 spawnPosition = _previousCheckpoint.position +Vector3.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
         
-       GameObject g = Instantiate(_checkPointGameObject, spawnPosition, Quaternion.identity,_checkPointHolderTransform);
+       GameObject g = Instantiate(_checkPointGameObject, spawnPosition,Quaternion.Euler(0,0,Random.Range(0,360f)),_checkPointHolderTransform);
        checkPointScript c = g.GetComponent<checkPointScript>();
         c._checkPointScore.text = (++_Score).ToString();
+        if(_Score == 2)
+        {
+            Instantiate(shiel, spawnPosition, Quaternion.identity);
+        }
 
+        // do the level Data Implementation
         alignType _random_enum = (alignType)Random.Range(0, System.Enum.GetValues(typeof(alignType)).Length);
         int __enemiesCount = Random.Range(4, 8);
         float __radius = Random.Range(1.4f, 2.1f);
         float __rotationspeed = Random.Range(80, 200);
-        c.Init(alignType.random, __enemiesCount, __radius, __rotationspeed);
-
+        c.Init(alignType.together, __enemiesCount, __radius, __rotationspeed);
         return g;
     }
-    public void CheckAndRemoveNode(GameObject g)
+    public void CheckAndRemoveCheckPoint(GameObject g)
     {
         if(g.TryGetComponent<checkPointScript>(out checkPointScript c))
         {
+            //_lastCheckPoint = c;
             c.DisableEnemies();
             c.GetComponent<CircleCollider2D>().enabled = false;
+            GetMiniCheckPointList(c._miniCheckPointList);
         }
-
         //if (_checkPointList.Contains(g))
         //_checkPointList.Remove(g);
         _checkPointList.RemoveAt(0);
-
         //make the next checkpoint to rotate
+        if(_miniCheckPoints.Count>0)
+            _miniCheckPoints[0].GetComponent<checkPointScript>()._canRotate = true;
+        else
         _checkPointList[1].GetComponent<checkPointScript>()._canRotate = true;
 
-        if(_checkPointHolderTransform.childCount>_checkPointCount+1)
+        if(_checkPointHolderTransform.childCount>_checkPointCount)
         {
             Destroy(_checkPointHolderTransform.GetChild(0).gameObject);
         }
 
         GenerateUpcomingCheckpoints();
+    }
+    public void CheckAndRemoveMiniCheckPoint(GameObject g)
+    {
+            _miniCheckPointCount++;
+        if (g.TryGetComponent<checkPointScript>(out checkPointScript c))
+        {
+            //_lastCheckPoint = c._miniCheckPointList[_miniCheckPointCount - 1].GetComponent<checkPointScript>();
+            c.DisableEnemies();
+        }
+        if (_miniCheckPointCount<_miniCheckPoints.Count)
+        {
+            _miniCheckPoints[_miniCheckPointCount].GetComponent<checkPointScript>()._canRotate = true;
+        }
+        else
+        {
+            GenerateUpcomingCheckpoints();
+            _checkPointList[1].GetComponent<checkPointScript>()._canRotate= true;
+        }
     }
     public void MoveCharacter()
     {
@@ -118,9 +179,51 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-        _player.Move(_checkPointList[1]);
+            if(_miniCheckPointCount<_miniCheckPoints.Count && _miniCheckPoints.Count>0)
+            {
+                
+                    _player.Move(_miniCheckPoints[_miniCheckPointCount]);
+               // _miniCheckPointCount++;
+            }
+            else
+            {
+               // if (_miniCheckPointCount == _miniCheckPoints.Count - 1)
+               //     _player.Move(_miniCheckPoints[_miniCheckPoints.Count - 1]);
+              //  else
+                    _player.Move(_checkPointList[1]);
+            }
+
         }
 
+    }
+    public void ActivateLastCheckPoint()
+    {
+        checkPointScript _lastCheckPoint = _checkPointList[0].GetComponent<checkPointScript>();
+       // if(_lastCheckPoint._miniCheckPointList.Count>0 && _lastCheckPoint._hasMiniCheckPoint)
+        //{
+            int _childCount = _lastCheckPoint._miniCheckPointList.Count;
+            for(int i=0;i<_childCount;i++)
+            {
+            _lastCheckPoint._miniCheckPointList[i].GetComponent<checkPointScript>().ResetEnemies();
+            }
+        //}
+    }
+    public void GetBackToLastCheckPoint()
+    {
+        checkPointScript _lastCheckPoint = _checkPointList[0].GetComponent<checkPointScript>();
+        if (_miniCheckPointCount <= 1)
+            _player.Move(_checkPointList[0].gameObject);
+        else
+        {
+            _miniCheckPointCount--;
+           _player.Move(_lastCheckPoint._miniCheckPointList[_miniCheckPointCount].gameObject);
+           // StartCoroutine(changeValue());
+        }
+    }
+    IEnumerator changeValue()
+    {
+        yield return new WaitForSeconds(.4f);
+        --_miniCheckPointCount;
     }
     private void Update()
     {
@@ -129,6 +232,8 @@ public class GameManager : MonoBehaviour
 
         _gameobject1Direction = _gameobject1.forward;
         _gameobject2Direction = _gameobject2.forward;*/
+        if(Input.GetKeyDown(KeyCode.Space))
+            GetBackToLastCheckPoint();
     }
     private void OnDrawGizmos()
     {

@@ -35,4 +35,10 @@ public class Fx_player : MonoBehaviour
             _fx_source.PlayOneShot(_dashMovement1);
         else _fx_source.PlayOneShot(_dashMovement2);
     }
+    public void MiniCheckPointReached()
+    {
+        //have to change the audioclip later.
+        _fx_source.pitch = Random.Range(.9f, 1.2f);
+        _fx_source.PlayOneShot(_checkPoint_reach);
+    }
 }

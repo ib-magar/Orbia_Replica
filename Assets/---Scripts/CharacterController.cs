@@ -12,9 +12,9 @@ public enum _State
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterController : MonoBehaviour
 {
+    [SerializeField] int _life =11;
     //Events
     public event Action _playerFailed;
-
     [SerializeField] _State state;
     [SerializeField] float _moveSpeed;
     [SerializeField] float _moveTime;
@@ -27,6 +27,8 @@ public class CharacterController : MonoBehaviour
     [Header("external Scripts")]
     [SerializeField] GameManager _gameManager;
     private Fx_player _fxPlayer;
+
+   
     private void Awake()
     {
         _gameManager=GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
@@ -65,21 +67,48 @@ public class CharacterController : MonoBehaviour
         if(collision.CompareTag("checkPoint"))
         {
             _fxPlayer.CheckPointReached();
-            _gameManager.CheckAndRemoveNode(collision.gameObject);
+            _gameManager.CheckAndRemoveCheckPoint(collision.gameObject);     
         }
         else if(collision.CompareTag("enemy"))
         {
-            _gameManager._playerdead = true;
-            _fxPlayer.FailCollision();
-            GetComponent<CircleCollider2D>().enabled = false;
-           // GetComponent<Rigidbody2D>().isKinematic = false;
-            _player.DOMoveY(_player.position.y - _fallDownDistance, _fallTime).From(_player.position.y).OnComplete(() =>
+            if (_life <= 0)
             {
-                //Game Restart Menu
-                GetComponent<CircleCollider2D>().enabled = true;
-                if (_playerFailed != null) _playerFailed();
-            });
+                state = _State.moving;
+                _gameManager._playerdead = true;
+                if (_playerFailed != null) _playerFailed();         //subscribed by the UI Manager
+                _fxPlayer.FailCollision();
+                GetComponent<CircleCollider2D>().enabled = false;
+                // GetComponent<Rigidbody2D>().isKinematic = false;
+                _player.DOMove(_gameManager.getLastCheckPoint().position, _fallTime - .2f).OnComplete(() =>
+                {
+                    //Game Restart Menu
+                    GetComponent<CircleCollider2D>().enabled = true;
+                    _gameManager._miniCheckPointCount = 0;      //reset the checkPoint count (mini)
+                    state = _State.idle;
+                });
+                //Regenerate the last checkPoint Enemies.
+            }
+            else
+            {
+                --_life;
+                //dodge sound
+                state = _State.idle;
+                _gameManager.GetBackToLastCheckPoint();
+                //get back to the last mini-point
+            }
 
+        }
+        else if(collision.CompareTag("child"))
+        {
+            _fxPlayer.MiniCheckPointReached();
+            _gameManager.CheckAndRemoveMiniCheckPoint(collision.gameObject);
+        }
+
+        if(collision.CompareTag("shield"))
+        {
+            // shield sound
+            _life += 1;
+            Destroy(collision.gameObject);
         }
     }
 
