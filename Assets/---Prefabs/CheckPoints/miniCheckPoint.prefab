@@ -532,6 +532,7 @@ MonoBehaviour:
   _enemiesCount: 3
   _enemiesCount2: 3
   _radius: 1.17
+  _radius2: 0
   _canRotate: 0
   _rotationSpeed: 70
   _enemieslist: []
@@ -541,12 +542,15 @@ MonoBehaviour:
   _rotating_point: {fileID: 9219822984221018530}
   _EnemiesHolder: {fileID: 9219822984303877300}
   _EnemiesHolder2: {fileID: 3558161834792608985}
+  _rotationType1: 1
+  _rotationType2: 0
   _enemesLayer:
     serializedVersion: 2
     m_Bits: 8
   _enemies:
   - {fileID: 8543089813933770700, guid: 7ba4dc7589db74b47913bcae1381e627, type: 3}
-  _angleMeasurement: 20
+  _angleMeasurement1: 15
+  _angleMeasurement2: 0
   _timeToFade: 0.3
   _scaleTarget: 2.5
   _checkPointScore: {fileID: 7038900085289621638}
@@ -555,6 +559,12 @@ MonoBehaviour:
   _miniCheckPointDistance: 3
   _miniCheckPointHolder: {fileID: 2726083124915923109}
   _miniCheckPointList: []
+  _abilities:
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
 --- !u!58 &475850567055166737
 CircleCollider2D:
   m_ObjectHideFlags: 0

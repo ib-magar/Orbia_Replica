@@ -1,0 +1,1779 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2261080643248567866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643248567813}
+  - component: {fileID: 2261080643248567812}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643248567813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643248567866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080644242912650}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643248567812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643248567866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080643317338075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643317338074}
+  - component: {fileID: 2261080643317337637}
+  m_Layer: 0
+  m_Name: Level (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643317338074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643317338075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080643472952079}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643317337637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643317338075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080643431487535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643431487534}
+  - component: {fileID: 2261080643431487529}
+  m_Layer: 0
+  m_Name: Level (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643431487534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643431487535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080644685897215}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643431487529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643431487535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080643472952076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643472952079}
+  - component: {fileID: 2261080643472952078}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643472952079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643472952076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080643317338074}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643472952078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643472952076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080643685391557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643685391556}
+  - component: {fileID: 2261080643685391559}
+  m_Layer: 0
+  m_Name: Level (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643685391556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643685391557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080645060172579}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643685391559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643685391557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080643734012981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080643734012980}
+  - component: {fileID: 2261080643734012983}
+  m_Layer: 0
+  m_Name: Level (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080643734012980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643734012981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080644582733520}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080643734012983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080643734012981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644014449465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644014449464}
+  - component: {fileID: 2261080644014449467}
+  m_Layer: 0
+  m_Name: Level (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644014449464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644014449465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080644268951489}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644014449467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644014449465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644109819694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644109819688}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: levelManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644109819688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644109819694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3666413, y: -3.5758252, z: -5.121273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080643685391556}
+  - {fileID: 2261080644014449464}
+  - {fileID: 2261080643734012980}
+  - {fileID: 2261080643431487534}
+  - {fileID: 2261080643317338074}
+  - {fileID: 2261080644242912650}
+  - {fileID: 2261080644164083365}
+  - {fileID: 2261080644912736273}
+  - {fileID: 2261080644811268714}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2261080644164083290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644164083365}
+  - component: {fileID: 2261080644164083364}
+  m_Layer: 0
+  m_Name: Level (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644164083365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644164083290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080644613165642}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644164083364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644164083290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644242912651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644242912650}
+  - component: {fileID: 2261080644242912661}
+  m_Layer: 0
+  m_Name: Level (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644242912650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644242912651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080643248567813}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644242912661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644242912651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644268951494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644268951489}
+  - component: {fileID: 2261080644268951488}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644268951489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644268951494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080644014449464}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644268951488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644268951494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644284250592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644284250595}
+  - component: {fileID: 2261080644284250594}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644284250595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644284250592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080644811268714}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644284250594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644284250592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644582733521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644582733520}
+  - component: {fileID: 2261080644582733523}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644582733520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644582733521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080643734012980}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644582733523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644582733521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644613165643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644613165642}
+  - component: {fileID: 2261080644613165653}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644613165642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644613165643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080644164083365}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644613165653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644613165643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644685897212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644685897215}
+  - component: {fileID: 2261080644685897214}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644685897215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644685897212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080643431487534}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644685897214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644685897212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644811268715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644811268714}
+  - component: {fileID: 2261080644811268725}
+  m_Layer: 0
+  m_Name: Level (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644811268714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644811268715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080644284250595}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644811268725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644811268715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080644912736278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080644912736273}
+  - component: {fileID: 2261080644912736272}
+  m_Layer: 0
+  m_Name: Level (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080644912736273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644912736278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2261080645257476717}
+  m_Father: {fileID: 2261080644109819688}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080644912736272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080644912736278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.15, y: 1.5}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 120}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 1
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.3
+    _circleCount: 1
+    _angleMeasurement1: 15
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 5
+    _miniCheckPointDistance: 3
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080645060172576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080645060172579}
+  - component: {fileID: 2261080645060172578}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080645060172579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080645060172576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080643685391556}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080645060172578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080645060172576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+--- !u!1 &2261080645257476706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2261080645257476717}
+  - component: {fileID: 2261080645257476716}
+  m_Layer: 0
+  m_Name: miniCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2261080645257476717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080645257476706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2261080644912736273}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2261080645257476716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261080645257476706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0a55368a8dcf4b83161c368b82965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CheckPoints:
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0
+  - _alignType: 1
+    _enemycount1: {x: 2, y: 5}
+    _enemycount2: {x: 0, y: 0}
+    _radius1: {x: 1.05, y: 1.4}
+    _radius2: {x: 0, y: 0}
+    _rotationSpeed1: {x: 80, y: 140}
+    _rotationSpeed2: {x: 0, y: 0}
+    _rotationSpeedType: 0
+    _rotationSpeedType2: 0
+    _childCircleRadius: 0.2
+    _circleCount: 1
+    _angleMeasurement1: 17
+    _angleMeasurement2: 0
+    _miniCheckPointCount: 0
+    _miniCheckPointDistance: 0
+    _hasAbility: 0
+    _abilityType: 0

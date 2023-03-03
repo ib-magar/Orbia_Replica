@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] int _Score;
+    [SerializeField] public int _Score;
     [Header("bools")]
     public bool _playerdead;
 
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     [Header("external scripts")]
     [SerializeField] CharacterController _player;
+    [SerializeField] Transform _levelManager;
 
     [Header("Enemy variation")]
     [SerializeField] List<GameObject> _enemies=new List<GameObject>();
@@ -40,10 +41,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> _miniCheckPoints = new List<GameObject>();
     [SerializeField] public int _miniCheckPointCount;
     private bool _firstInstantiationCheckPoint = true;
-
+    [Header("Abilities")]
+    [SerializeField] GameObject[] _abilities;
     public GameObject shiel;
-   // [Header("Getting back")]
-    //[SerializeField] checkPointScript _lastCheckPoint;
+    [Header("Level Data Track")]
+    public int _levelCount;
     public Transform getLastCheckPoint()
     {
         return _checkPointList[0].transform;
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         _firstInstantiationCheckPoint = true;
 
         _player=GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+        _levelManager=GameObject.FindGameObjectWithTag("levelManager").transform;
         _checkPointHolderTransform = transform.Find("CheckPointHolder").transform;
        
         _checkPointList.Add(Instantiate(new GameObject("object"),Vector3.zero-Vector3.down*4f,Quaternion.identity,_checkPointHolderTransform));
@@ -103,7 +106,7 @@ public class GameManager : MonoBehaviour
         }
     }
     GameObject GenerateCheckPoint(Transform _previousCheckpoint)
-    {
+    {   
         _angleGameobject.eulerAngles = new Vector3(0, 0, Random.Range(_angleClamp.x, _angleClamp.y));
         Vector3 spawnPosition = _previousCheckpoint.position + _angleGameobject.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
         //Vector3 spawnPosition = _previousCheckpoint.position +Vector3.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
@@ -111,17 +114,12 @@ public class GameManager : MonoBehaviour
        GameObject g = Instantiate(_checkPointGameObject, spawnPosition,Quaternion.Euler(0,0,Random.Range(0,360f)),_checkPointHolderTransform);
        checkPointScript c = g.GetComponent<checkPointScript>();
         c._checkPointScore.text = (++_Score).ToString();
-        if(_Score == 2)
-        {
-            Instantiate(shiel, spawnPosition, Quaternion.identity);
-        }
+
+        _levelCount %= _levelManager.childCount;
 
         // do the level Data Implementation
-        alignType _random_enum = (alignType)Random.Range(0, System.Enum.GetValues(typeof(alignType)).Length);
-        int __enemiesCount = Random.Range(4, 8);
-        float __radius = Random.Range(1.4f, 2.1f);
-        float __rotationspeed = Random.Range(80, 200);
-        c.Init(alignType.together, __enemiesCount, __radius, __rotationspeed);
+        c.Init(_levelManager.GetChild(_levelCount++).GetComponent<levelManagement>()._CheckPoints[0]);
+        //c.Init(alignType.together, __enemiesCount, __radius, __rotationspeed);
         return g;
     }
     public void CheckAndRemoveCheckPoint(GameObject g)
@@ -238,9 +236,9 @@ public class GameManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(_gameobject1.position, _gameobject1.position + _gameobject1.up * 5f);
+        /*Gizmos.DrawLine(_gameobject1.position, _gameobject1.position + _gameobject1.up * 5f);
         Gizmos.DrawLine(_gameobject2.position, _gameobject2.position + _gameobject2.up * 5f);
-
-        Gizmos.DrawLine(_angleGameobject.position, _angleGameobject.position + _angleGameobject.up * 5f);
+*/
+        //Gizmos.DrawLine(_angleGameobject.position, _angleGameobject.position + _angleGameobject.up * 5f);
     }
 }
