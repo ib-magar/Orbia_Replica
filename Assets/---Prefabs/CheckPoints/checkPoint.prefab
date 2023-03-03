@@ -60,7 +60,7 @@ RectTransform:
   m_GameObject: {fileID: 3454543224999259889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.83389, y: 5.83389, z: 5.83389}
+  m_LocalScale: {x: 10.47475, y: 10.47475, z: 10.47475}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4507131975970515184}
@@ -448,29 +448,41 @@ MonoBehaviour:
   _enemiesCount: 3
   _enemiesCount2: 3
   _radius: 1.17
+  _radius2: 0
   _canRotate: 0
   _rotationSpeed: 70
   _enemieslist: []
   _childCircleRadius: 0.3
   _circle: {fileID: 660656588801685309}
+  _lineRendererObject: {fileID: 3941778278585384494, guid: 16fb2678f9bd77e4b8d85ab79a8a716a, type: 3}
   _circleCount: 1
   _rotating_point: {fileID: 5988408252654576665}
   _EnemiesHolder: {fileID: 5988408252569596175}
   _EnemiesHolder2: {fileID: 1061977884358383150}
+  _rotationType1: 1
+  _rotationType2: 0
   _enemesLayer:
     serializedVersion: 2
     m_Bits: 8
   _enemies:
   - {fileID: 8543089813933770700, guid: 7ba4dc7589db74b47913bcae1381e627, type: 3}
-  _angleMeasurement: 20
+  - {fileID: 5629034130652852462, guid: ba29ecac876b43048bc9045562b968eb, type: 3}
+  _angleMeasurement1: 20
+  _angleMeasurement2: 17
   _timeToFade: 0.3
-  _scaleTarget: 2.5
+  _scaleTarget: 3
   _checkPointScore: {fileID: 5568507293632312637}
   _miniCheckPointGameObect: {fileID: 9219822984581046385, guid: 23a49a525631471458664f8f37f1efcc, type: 3}
   _miniCheckPointCount: 5
   _miniCheckPointDistance: 3
   _miniCheckPointHolder: {fileID: 665551553260373278}
   _miniCheckPointList: []
+  _abilities:
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
+  - {fileID: 3005156739158953619, guid: 09f4cadc565a18148a13aa322a796dee, type: 3}
 --- !u!58 &3058773341566034090
 CircleCollider2D:
   m_ObjectHideFlags: 0

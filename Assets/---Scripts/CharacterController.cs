@@ -71,30 +71,33 @@ public class CharacterController : MonoBehaviour
         }
         else if(collision.CompareTag("enemy"))
         {
-            if (_life <= 0)
+            if (state == _State.moving)
             {
-                state = _State.moving;
-                _gameManager._playerdead = true;
-                if (_playerFailed != null) _playerFailed();         //subscribed by the UI Manager
-                _fxPlayer.FailCollision();
-                GetComponent<CircleCollider2D>().enabled = false;
-                // GetComponent<Rigidbody2D>().isKinematic = false;
-                _player.DOMove(_gameManager.getLastCheckPoint().position, _fallTime - .2f).OnComplete(() =>
+                if (_life <= 0)
                 {
-                    //Game Restart Menu
-                    GetComponent<CircleCollider2D>().enabled = true;
-                    _gameManager._miniCheckPointCount = 0;      //reset the checkPoint count (mini)
+                    state = _State.moving;
+                    _gameManager._playerdead = true;
+                    if (_playerFailed != null) _playerFailed();         //subscribed by the UI Manager
+                    _fxPlayer.FailCollision();
+                    GetComponent<CircleCollider2D>().enabled = false;
+                    // GetComponent<Rigidbody2D>().isKinematic = false;
+                    _player.DOMove(_gameManager.getLastCheckPoint().position, _fallTime - .2f).OnComplete(() =>
+                    {
+                        //Game Restart Menu
+                        GetComponent<CircleCollider2D>().enabled = true;
+                        _gameManager._miniCheckPointCount = 0;      //reset the checkPoint count (mini)
+                        state = _State.idle;
+                    });
+                    //Regenerate the last checkPoint Enemies.
+                }
+                else
+                {
+                    --_life;
+                    //dodge sound
                     state = _State.idle;
-                });
-                //Regenerate the last checkPoint Enemies.
-            }
-            else
-            {
-                --_life;
-                //dodge sound
-                state = _State.idle;
-                _gameManager.GetBackToLastCheckPoint();
-                //get back to the last mini-point
+                    _gameManager.GetBackToLastCheckPoint();
+                    //get back to the last mini-point
+                }
             }
 
         }
