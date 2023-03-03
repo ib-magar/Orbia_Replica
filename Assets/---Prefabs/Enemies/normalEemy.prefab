@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 7027439322672921031}
   - component: {fileID: 2880436436915678591}
   - component: {fileID: -764145055909518843}
+<<<<<<< HEAD
   - component: {fileID: 1068986698293120327}
+=======
+>>>>>>> main
   m_Layer: 3
   m_Name: normalEemy
   m_TagString: enemy
@@ -31,7 +34,11 @@ Transform:
   m_GameObject: {fileID: 8543089813933770700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.001, y: 7.647, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.048217945, y: 0.048217945, z: 0.048217945}
+=======
+  m_LocalScale: {x: 0.38612077, y: 0.38612077, z: 0.38612077}
+>>>>>>> main
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,6 +149,7 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
+<<<<<<< HEAD
   - {x: -1.9483908, y: -3.4631395, z: 0}
   - {x: -2.6212025, y: -3.044362, z: 0}
   - {x: -3.1474833, y: -2.5434697, z: 0}
@@ -170,6 +178,27 @@ MonoBehaviour:
   m_ShapePathHash: 1054911324
   m_Mesh: {fileID: 0}
   m_InstanceId: -208254
+=======
+  - {x: -0.35087916, y: -0.34854892, z: 0}
+  - {x: -0.46587467, y: -0.18358646, z: 0}
+  - {x: -0.4915048, y: 0.058735304, z: 0}
+  - {x: -0.41694438, y: 0.2800865, z: 0}
+  - {x: -0.25068867, y: 0.4347594, z: 0}
+  - {x: -0.07676255, y: 0.49677703, z: 0}
+  - {x: 0.10264842, y: 0.48978725, z: 0}
+  - {x: 0.2669987, y: 0.43009996, z: 0}
+  - {x: 0.40089002, y: 0.30338618, z: 0}
+  - {x: 0.49409053, y: 0.09834487, z: 0}
+  - {x: 0.48943046, y: -0.09970542, z: 0}
+  - {x: 0.42885014, y: -0.25581703, z: 0}
+  - {x: 0.29961887, y: -0.39747983, z: 0}
+  - {x: 0.17487878, y: -0.4655178, z: 0}
+  - {x: 0.035078052, y: -0.49347812, z: 0}
+  - {x: -0.22355336, y: -0.4492079, z: 0}
+  m_ShapePathHash: 1068576207
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 51284
+>>>>>>> main
 --- !u!96 &-764145055909518843
 TrailRenderer:
   serializedVersion: 2
@@ -269,6 +298,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+<<<<<<< HEAD
 --- !u!58 &1068986698293120327
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -285,3 +315,5 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.24}
   serializedVersion: 2
   m_Radius: 3.99
+=======
+>>>>>>> main
