@@ -8,7 +8,6 @@ TagManager:
   - enemy
   - child
   - shield
-  - levelManager
   layers:
   - Default
   - TransparentFX
