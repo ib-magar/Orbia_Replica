@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1842029699425027677}
   - component: {fileID: 7027439322672921031}
   m_Layer: 3
-  m_Name: normalEemy
+  m_Name: BIGGER enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8543089813933770700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.001, y: 6.155, z: 0}
-  m_LocalScale: {x: 0.104418, y: 0.104418, z: 0.6215357}
+  m_LocalScale: {x: 0.16255794, y: 0.16255794, z: 0.9676068}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

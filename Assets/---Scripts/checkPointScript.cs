@@ -6,17 +6,17 @@ using UnityEngine.UI;
 using TMPro;
 public enum alignType
 {
-    measured,together,random
+    measured, together, random
 }
 public class checkPointScript : MonoBehaviour
 {
     public bool _hasMiniCheckPoint;
     [SerializeField] public alignType _alignType;
-    [SerializeField] public int _enemiesCount=3;
-    [SerializeField] public int _enemiesCount2=3;
+    [SerializeField] public int _enemiesCount = 3;
+    [SerializeField] public int _enemiesCount2 = 3;
     [SerializeField] public float _radius;
     [Header("rotation")]
-    [SerializeField] public bool _canRotate=false;
+    [SerializeField] public bool _canRotate = false;
     [SerializeField] public float _rotationSpeed;
 
     [Header("Child")]
@@ -32,7 +32,7 @@ public class checkPointScript : MonoBehaviour
     [SerializeField] LayerMask _enemesLayer;
 
     [Header("Enemies")]
-    [SerializeField] List<GameObject> _enemies=new List<GameObject>();
+    [SerializeField] List<GameObject> _enemies = new List<GameObject>();
     [Header("angle measurement")]
     [SerializeField] float _angleMeasurement;
     [Header("enemies disable")]
@@ -53,9 +53,9 @@ public class checkPointScript : MonoBehaviour
     private GameManager _gameManager;
     private void Awake()
     {
-     _gameManager=GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        _gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
-    public void Init(alignType _alignType=alignType.together,int enemies_count=1,float _radius=1.5f,float _rotationSpeed=90f,float _child_radius=.35f)
+    public void Init(alignType _alignType = alignType.together, int enemies_count = 1, float _radius = 1.5f, float _rotationSpeed = 90f, float _child_radius = .35f)
     {
         this._alignType = _alignType;
         _enemiesCount = enemies_count;
@@ -63,7 +63,7 @@ public class checkPointScript : MonoBehaviour
         this._rotationSpeed = _rotationSpeed;
         this._childCircleRadius = _child_radius;
     }
-    IEnumerator  Start()
+    IEnumerator Start()
     {
         Physics2D.queriesStartInColliders = false;
         yield return new WaitForSeconds(.5f);
@@ -82,7 +82,7 @@ public class checkPointScript : MonoBehaviour
             default: break;
         }
 
-        if(_hasMiniCheckPoint)
+        if (_hasMiniCheckPoint)
         {
             GenerateMiniCheckPoint();
         }
@@ -91,7 +91,7 @@ public class checkPointScript : MonoBehaviour
     void GenerateMiniCheckPoint()
     {
         float _distance = _radius + _miniCheckPointDistance;
-            Transform _rotateObject;
+        Transform _rotateObject;
         for (int i = 0; i < _miniCheckPointCount; i++)
         {
             if (i == 0) _rotateObject = _rotating_point;
@@ -105,16 +105,16 @@ public class checkPointScript : MonoBehaviour
             //_rotateObject.eulerAngles += Vector3.forward * _angleOffset;
             //_distance += _miniCheckPointDistance;
         }
-        
+
     }
     void InsantiateEnemiesMeasureType()
     {
         _circle.transform.localScale = Vector3.one * _childCircleRadius;
         float _angleOffset = 360 / _enemiesCount;
-        for(int i=0;i<_enemiesCount;++i)
+        for (int i = 0; i < _enemiesCount; ++i)
         {
             Vector3 _spawnPosition = _rotating_point.position + _rotating_point.transform.up * _radius;
-            GameObject g =  Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity,_EnemiesHolder);
+            GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder);
             _enemieslist.Add(g.transform);
             _rotating_point.eulerAngles += Vector3.forward * _angleOffset;
         }
@@ -136,13 +136,13 @@ public class checkPointScript : MonoBehaviour
             _rotating_point.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360f));
             for (int i = 0; i < _enemiesCount2; ++i)
             {
-                Vector3 _spawnPosition = _rotating_point.position + _rotating_point.transform.up * _radius*2f;
+                Vector3 _spawnPosition = _rotating_point.position + _rotating_point.transform.up * _radius * 2f;
                 GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder2);
                 _enemieslist.Add(g.transform);
                 _rotating_point.eulerAngles += Vector3.forward * _angleOffset;
             }
         }
-        
+
     }
     void InsantiateEnemiesRandomType()
     {
@@ -152,12 +152,13 @@ public class checkPointScript : MonoBehaviour
         for (int i = 0; i < _enemiesCount; i++)
         {
             Vector3 _spawnPosition = _rotating_point.position + _rotating_point.transform.up * _radius;
-            RaycastHit2D hit = Physics2D.Raycast(_rotating_point.position, _rotating_point.up, _radius,_enemesLayer);
-            if(hit.collider==null)
+            RaycastHit2D hit = Physics2D.Raycast(_rotating_point.position, _rotating_point.up, _radius, _enemesLayer);
+            if (hit.collider == null)
             {
-             GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder);
-             _enemieslist.Add(g.transform);
-            }else
+                GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder);
+                _enemieslist.Add(g.transform);
+            }
+            else
             {
                 // decrese the value of i
             }
@@ -175,15 +176,15 @@ public class checkPointScript : MonoBehaviour
         {
             _EnemiesHolder2.gameObject.SetActive(false);
         });
-        
+
         //_EnemiesHolder.gameObject.SetActive(false);
     }
     private void Update()
     {
-        if(_canRotate)
+        if (_canRotate)
         {
-        _EnemiesHolder.eulerAngles += Vector3.forward * _rotationSpeed*Time.deltaTime;
-        _EnemiesHolder2.eulerAngles += Vector3.forward * _rotationSpeed*1.5f*Time.deltaTime;
+            _EnemiesHolder.eulerAngles += Vector3.forward * _rotationSpeed * Time.deltaTime;
+            _EnemiesHolder2.eulerAngles += Vector3.forward * _rotationSpeed * 1.5f * Time.deltaTime;
 
         }
     }
@@ -192,10 +193,10 @@ public class checkPointScript : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, _radius);
         //foreach(Transform t in _enemieslist)
-            //Gizmos.DrawWireSphere(t.position, _childRadius);
+        //Gizmos.DrawWireSphere(t.position, _childRadius);
 
-        Gizmos.color= Color.red;
-        Gizmos.DrawLine(_rotating_point.position,_rotating_point.position+ _rotating_point.up * _radius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(_rotating_point.position, _rotating_point.position + _rotating_point.up * _radius);
     }
     public void ResetEnemies()
     {

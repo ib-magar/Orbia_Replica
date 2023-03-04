@@ -462,6 +462,7 @@ MonoBehaviour:
     m_Bits: 8
   _enemies:
   - {fileID: 8543089813933770700, guid: 7ba4dc7589db74b47913bcae1381e627, type: 3}
+  - {fileID: 8543089813933770700, guid: a6fa145fd428bbc4b8d7cd2fa6f5f1c9, type: 3}
   _angleMeasurement: 20
   _timeToFade: 0.3
   _scaleTarget: 2.5

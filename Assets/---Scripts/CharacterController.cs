@@ -7,12 +7,12 @@ using System;
 
 public enum _State
 {
-    idle,moving
+    idle, moving
 }
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] int _life =11;
+    [SerializeField] int _life = 11;
     //Events
     public event Action _playerFailed;
     [SerializeField] _State state;
@@ -28,12 +28,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField] GameManager _gameManager;
     private Fx_player _fxPlayer;
 
-   
+
     private void Awake()
     {
-        _gameManager=GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        _fxPlayer=GetComponent<Fx_player>();
-        state=_State.idle;
+        _gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        _fxPlayer = GetComponent<Fx_player>();
+        state = _State.idle;
     }
     private void Start()
     {
@@ -41,11 +41,11 @@ public class CharacterController : MonoBehaviour
     }
     public void Move(GameObject movePosition)
     {
-        
+
         // move the player to the next checkpoint 
-        if(state ==_State.idle)
+        if (state == _State.idle)
         {
-            state= _State.moving;
+            state = _State.moving;
             /*if (_currentCheckPoint != null)
             _player.DOMove(_currentCheckPoint.transform.position, _moveTime).From(_player.position).OnComplete(() =>
             {
@@ -55,21 +55,21 @@ public class CharacterController : MonoBehaviour
             _fxPlayer.DashSoundPlay();
             _player.DOMove(movePosition.transform.position, _moveTime).From(_player.position).OnComplete(() =>
             {
-                state= _State.idle;
+                state = _State.idle;
             });
-            
+
             //_currentCheckPoint = movePosition;
         }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("checkPoint"))
+        if (collision.CompareTag("checkPoint"))
         {
             _fxPlayer.CheckPointReached();
-            _gameManager.CheckAndRemoveCheckPoint(collision.gameObject);     
+            _gameManager.CheckAndRemoveCheckPoint(collision.gameObject);
         }
-        else if(collision.CompareTag("enemy"))
+        else if (collision.CompareTag("enemy"))
         {
             if (_life <= 0)
             {
@@ -98,13 +98,13 @@ public class CharacterController : MonoBehaviour
             }
 
         }
-        else if(collision.CompareTag("child"))
+        else if (collision.CompareTag("child"))
         {
             _fxPlayer.MiniCheckPointReached();
             _gameManager.CheckAndRemoveMiniCheckPoint(collision.gameObject);
         }
 
-        if(collision.CompareTag("shield"))
+        if (collision.CompareTag("shield"))
         {
             // shield sound
             _life += 1;

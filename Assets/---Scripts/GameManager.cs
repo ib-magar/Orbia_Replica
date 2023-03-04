@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Checkpoint Gameobject")]
     [SerializeField] GameObject _checkPointGameObject;
     [SerializeField] GameObject _checkPointDummyObject;
-   
+
 
     [Header("CheckPoint List")]
     [SerializeField] int _checkPointCount;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CharacterController _player;
 
     [Header("Enemy variation")]
-    [SerializeField] List<GameObject> _enemies=new List<GameObject>();
+    [SerializeField] List<GameObject> _enemies = new List<GameObject>();
 
     [Header("Mini Checkpoints")]
     [SerializeField] List<GameObject> _miniCheckPoints = new List<GameObject>();
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     private bool _firstInstantiationCheckPoint = true;
 
     public GameObject shiel;
-   // [Header("Getting back")]
+    // [Header("Getting back")]
     //[SerializeField] checkPointScript _lastCheckPoint;
     public Transform getLastCheckPoint()
     {
@@ -57,10 +57,10 @@ public class GameManager : MonoBehaviour
     {
         _firstInstantiationCheckPoint = true;
 
-        _player=GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
         _checkPointHolderTransform = transform.Find("CheckPointHolder").transform;
-       
-        _checkPointList.Add(Instantiate(new GameObject("object"),Vector3.zero-Vector3.down*4f,Quaternion.identity,_checkPointHolderTransform));
+
+        _checkPointList.Add(Instantiate(new GameObject("object"), Vector3.zero - Vector3.down * 4f, Quaternion.identity, _checkPointHolderTransform));
         _checkPointList.Add(Instantiate(_checkPointDummyObject, Vector3.zero, Quaternion.identity, _checkPointHolderTransform));
     }
     private void Start()
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         //_player.Move(_checkPointList[0]);
         MoveCharacter();
         _Score = 1;
-        
+
     }
     [ContextMenu("tools/removeFirstNode")]
     public void removeFirstPoint()
@@ -105,13 +105,13 @@ public class GameManager : MonoBehaviour
     GameObject GenerateCheckPoint(Transform _previousCheckpoint)
     {
         _angleGameobject.eulerAngles = new Vector3(0, 0, Random.Range(_angleClamp.x, _angleClamp.y));
-        Vector3 spawnPosition = _previousCheckpoint.position + _angleGameobject.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
+        Vector3 spawnPosition = _previousCheckpoint.position + _angleGameobject.up * Random.Range(_checkPointDistance.x, _checkPointDistance.y);
         //Vector3 spawnPosition = _previousCheckpoint.position +Vector3.up * Random.Range(_checkPointDistance.x,_checkPointDistance.y);
-        
-       GameObject g = Instantiate(_checkPointGameObject, spawnPosition,Quaternion.Euler(0,0,Random.Range(0,360f)),_checkPointHolderTransform);
-       checkPointScript c = g.GetComponent<checkPointScript>();
+
+        GameObject g = Instantiate(_checkPointGameObject, spawnPosition, Quaternion.Euler(0, 0, Random.Range(0, 360f)), _checkPointHolderTransform);
+        checkPointScript c = g.GetComponent<checkPointScript>();
         c._checkPointScore.text = (++_Score).ToString();
-        if(_Score == 2)
+        if (_Score == 2)
         {
             Instantiate(shiel, spawnPosition, Quaternion.identity);
         }
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
     }
     public void CheckAndRemoveCheckPoint(GameObject g)
     {
-        if(g.TryGetComponent<checkPointScript>(out checkPointScript c))
+        if (g.TryGetComponent<checkPointScript>(out checkPointScript c))
         {
             //_lastCheckPoint = c;
             c.DisableEnemies();
@@ -137,12 +137,12 @@ public class GameManager : MonoBehaviour
         //_checkPointList.Remove(g);
         _checkPointList.RemoveAt(0);
         //make the next checkpoint to rotate
-        if(_miniCheckPoints.Count>0)
+        if (_miniCheckPoints.Count > 0)
             _miniCheckPoints[0].GetComponent<checkPointScript>()._canRotate = true;
         else
-        _checkPointList[1].GetComponent<checkPointScript>()._canRotate = true;
+            _checkPointList[1].GetComponent<checkPointScript>()._canRotate = true;
 
-        if(_checkPointHolderTransform.childCount>_checkPointCount)
+        if (_checkPointHolderTransform.childCount > _checkPointCount)
         {
             Destroy(_checkPointHolderTransform.GetChild(0).gameObject);
         }
@@ -151,46 +151,46 @@ public class GameManager : MonoBehaviour
     }
     public void CheckAndRemoveMiniCheckPoint(GameObject g)
     {
-            _miniCheckPointCount++;
+        _miniCheckPointCount++;
         if (g.TryGetComponent<checkPointScript>(out checkPointScript c))
         {
             //_lastCheckPoint = c._miniCheckPointList[_miniCheckPointCount - 1].GetComponent<checkPointScript>();
             c.DisableEnemies();
         }
-        if (_miniCheckPointCount<_miniCheckPoints.Count)
+        if (_miniCheckPointCount < _miniCheckPoints.Count)
         {
             _miniCheckPoints[_miniCheckPointCount].GetComponent<checkPointScript>()._canRotate = true;
         }
         else
         {
             GenerateUpcomingCheckpoints();
-            _checkPointList[1].GetComponent<checkPointScript>()._canRotate= true;
+            _checkPointList[1].GetComponent<checkPointScript>()._canRotate = true;
         }
     }
     public void MoveCharacter()
     {
-       // if (_checkPointList != null || _checkPointList.Count < 1)               // can create function to check the nullity of the list 
+        // if (_checkPointList != null || _checkPointList.Count < 1)               // can create function to check the nullity of the list 
         //    return;
 
-        if(_playerdead)
+        if (_playerdead)
         {
-        _player.Move(_checkPointList[0]);
+            _player.Move(_checkPointList[0]);
             _playerdead = false;
         }
         else
         {
-            if(_miniCheckPointCount<_miniCheckPoints.Count && _miniCheckPoints.Count>0)
+            if (_miniCheckPointCount < _miniCheckPoints.Count && _miniCheckPoints.Count > 0)
             {
-                
-                    _player.Move(_miniCheckPoints[_miniCheckPointCount]);
-               // _miniCheckPointCount++;
+
+                _player.Move(_miniCheckPoints[_miniCheckPointCount]);
+                // _miniCheckPointCount++;
             }
             else
             {
-               // if (_miniCheckPointCount == _miniCheckPoints.Count - 1)
-               //     _player.Move(_miniCheckPoints[_miniCheckPoints.Count - 1]);
-              //  else
-                    _player.Move(_checkPointList[1]);
+                // if (_miniCheckPointCount == _miniCheckPoints.Count - 1)
+                //     _player.Move(_miniCheckPoints[_miniCheckPoints.Count - 1]);
+                //  else
+                _player.Move(_checkPointList[1]);
             }
 
         }
@@ -199,13 +199,13 @@ public class GameManager : MonoBehaviour
     public void ActivateLastCheckPoint()
     {
         checkPointScript _lastCheckPoint = _checkPointList[0].GetComponent<checkPointScript>();
-       // if(_lastCheckPoint._miniCheckPointList.Count>0 && _lastCheckPoint._hasMiniCheckPoint)
+        // if(_lastCheckPoint._miniCheckPointList.Count>0 && _lastCheckPoint._hasMiniCheckPoint)
         //{
-            int _childCount = _lastCheckPoint._miniCheckPointList.Count;
-            for(int i=0;i<_childCount;i++)
-            {
+        int _childCount = _lastCheckPoint._miniCheckPointList.Count;
+        for (int i = 0; i < _childCount; i++)
+        {
             _lastCheckPoint._miniCheckPointList[i].GetComponent<checkPointScript>().ResetEnemies();
-            }
+        }
         //}
     }
     public void GetBackToLastCheckPoint()
@@ -216,8 +216,8 @@ public class GameManager : MonoBehaviour
         else
         {
             _miniCheckPointCount--;
-           _player.Move(_lastCheckPoint._miniCheckPointList[_miniCheckPointCount].gameObject);
-           // StartCoroutine(changeValue());
+            _player.Move(_lastCheckPoint._miniCheckPointList[_miniCheckPointCount].gameObject);
+            // StartCoroutine(changeValue());
         }
     }
     IEnumerator changeValue()
@@ -232,7 +232,7 @@ public class GameManager : MonoBehaviour
 
         _gameobject1Direction = _gameobject1.forward;
         _gameobject2Direction = _gameobject2.forward;*/
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             GetBackToLastCheckPoint();
     }
     private void OnDrawGizmos()
