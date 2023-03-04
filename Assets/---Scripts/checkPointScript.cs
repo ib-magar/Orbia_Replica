@@ -77,13 +77,12 @@ public class checkPointScript : MonoBehaviour
         _rotationType1 = _checkPointData._rotationSpeedType;
         _rotationType2 = _checkPointData._rotationSpeedType2;
         _childCircleRadius = _checkPointData._childCircleRadius;
-<<<<<<< HEAD
-        //_angleMeasurement1 = /*_checkPointData._angleMeasurement1;*///20f;
+       //_angleMeasurement1 = /*_checkPointData._angleMeasurement1;*///20f;
        // _angleMeasurement2=_checkPointData._angleMeasurement2;
-=======
+
         _angleMeasurement1 = /*_checkPointData._angleMeasurement1;*/20f;
         _angleMeasurement2=_checkPointData._angleMeasurement2;
->>>>>>> main
+
         if (_hasMiniCheckPoint)
             _miniCheckPointCount = _checkPointData._miniCheckPointCount;
         _miniCheckPointDistance= _checkPointData._miniCheckPointDistance;
@@ -130,7 +129,7 @@ public class checkPointScript : MonoBehaviour
             GameObject g = Instantiate(_miniCheckPointGameObect, _spawnPosition, Quaternion.Euler(0, 0, Random.Range(0, 360f)), _miniCheckPointHolder);
             g.GetComponent<checkPointScript>().Init(_levelManager.GetChild(_gameManager._levelCount - 1).GetChild(0).GetComponent<levelManagement>()._CheckPoints[i]);
             _miniCheckPointList.Add(g);
-<<<<<<< HEAD
+
             if(i>0 && i<_miniCheckPointCount-1)
             {
                 Vector3 dir = (_miniCheckPointList[i].transform.position - _miniCheckPointList[i-1].transform.position).normalized;
@@ -139,8 +138,8 @@ public class checkPointScript : MonoBehaviour
                 _lineRenderer.SetPosition(0, _miniCheckPointList[i - 1].transform.position+dir*(_childCircleRadius+.25f));
                 _lineRenderer.SetPosition(1, _miniCheckPointList[i].transform.position-dir*(_childCircleRadius+.25f));
             }
-=======
->>>>>>> main
+
+
         }
         
     }
@@ -174,11 +173,11 @@ public class checkPointScript : MonoBehaviour
             for (int i = 0; i < _enemiesCount2; ++i)
             {
                 Vector3 _spawnPosition = _rotating_point.position + _rotating_point.transform.up * _radius2;
-<<<<<<< HEAD
+
                 GameObject g = Instantiate(_enemies[1], _spawnPosition, Quaternion.identity, _EnemiesHolder2);
-=======
-                GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder2);
->>>>>>> main
+
+               // GameObject g = Instantiate(_enemies[Random.Range(0, _enemies.Count)], _spawnPosition, Quaternion.identity, _EnemiesHolder2);
+
                 _enemieslist.Add(g.transform);
                 _rotating_point.eulerAngles += Vector3.forward * _angleOffset;
             }
